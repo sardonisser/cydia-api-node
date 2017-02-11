@@ -1,0 +1,37 @@
+{
+  "name": "cydia-api",
+  "version": "0.1.0",
+  "description": "Unofficial library for https://cydia.saurik.com/api/",
+  "main": "cydia-api-node",
+  "scripts": {
+	"test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1Conan/cydia-api-node.git"
+  },
+  "keywords": [
+    "Cydia API"
+  ],
+  "author": {	
+    "name": "Andre Marx",
+	"email": "me@1conan.com",
+	"url": "https://1conan.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1Conan/cydia-api-node/issues"
+  },
+  "homepage": "https://github.com/1Conan/cydia-api-node",
+  "file": [
+    "index.js",
+	"test.js"
+  ],
+  "repository": {
+    "type": "git",
+	"url": "https://github.com/1Conan/cydia-api-node"
+  },
+  "dependencies": {
+	"superagent": "latest"  
+  }
+}
