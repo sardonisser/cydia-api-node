@@ -5,6 +5,7 @@ Just a simple node library for the cydia api. Used for @TweakBot#2861 in Discord
 #How To Use
 <hr>
 .getPrice(string) - Get price for package.<br>
+
 ```
 const cydia = require('cydia-api-node');
 
@@ -13,8 +14,10 @@ cydia.getPrice('com.ziph0n.pickpocket') //Use the package name and not the displ
 	console.log(price); //1.99
 });
 ```
+
 <br>
-.getInfo(string) - Basic Info<br>
+.getInfo(string) - Basic Info
+
 ```
 const cydia = require('cydia-api-node');
 
@@ -45,8 +48,10 @@ cydia.getInfo('PickPocket') //Use the package name or the display name. Case-ins
 	*/
 });
 ```
+
 <br>
 .getAllInfo(string) - .getInfo() and .getPrice() in one function<br>
+
 ```
 const cydia = require('cydia-api-node');
 
