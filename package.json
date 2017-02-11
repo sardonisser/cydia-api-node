@@ -1,6 +1,6 @@
 {
   "name": "cydia-api-node",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial library for https://cydia.saurik.com/api/",
   "main": "cydia-api-node",
   "scripts": {
