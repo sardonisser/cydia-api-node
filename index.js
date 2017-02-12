@@ -17,18 +17,18 @@ let self = module.exports = {};
  */
 self.getPrice = function(pkgname) {
 	return new Promise(function(resolve, reject){
-    const req = request.get(`https://cydia.saurik.com/api/ibbignerd?query=${pkgname}`)
-    .set("User-Agent", useragent);
-    
-    req.then((res) => {
-        let price;
-        if(res.text == "null") {
-            price = 0;
-        } else {
-            price = Math.round(res.body.msrp * 100) / 100;
-        }
-        resolve(price);        
-    });
+		const req = request.get(`https://cydia.saurik.com/api/ibbignerd?query=${pkgname}`)
+		.set("User-Agent", useragent);
+		
+		req.then((res) => {
+			let price;
+			if(res.text == "null") {
+				price = 0;
+			} else {
+				price = Math.round(res.body.msrp * 100) / 100;
+			}
+			resolve(price);        
+		});
 	});
 };
     
