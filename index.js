@@ -49,16 +49,21 @@ self.getInfo = function(displayname) {
 			const result = res.body;
 			const results = result.results;
 			const resultsLength = results.length; 
-			
+			let foundTweak = false;
 			for(let i = 0; i < resultsLength; i++){
 				if(results[i].display !== null) {
 					if(displayname.toLowerCase() === results[i].display.toLowerCase()) {
+						foundTweak = true;
 						resolve(results[i]);
 					}  
 					if(displayname.toLowerCase() === results[i].name.toLowerCase()) {
+						foundTweak = true;
 						resolve(results[i]);
 					}
 				}    
+			}
+			if(!foundTweak) {
+				resolve(false);
 			}
 		});
 	});
@@ -72,10 +77,14 @@ self.getInfo = function(displayname) {
  self.getAllInfo = function(displayname) {
 	return new Promise(function(resolve, reject){
 		let info = self.getInfo(displayname).then((info) => {
-			const price = self.getPrice(info.name).then(price => {
-				info.price = price;
-				resolve(info);
-			});
+			if(!info) {
+				resolve(false);
+			} else {
+				const price = self.getPrice(info.name).then(price => {
+					info.price = price;
+					resolve(info);
+				});
+			}
 		});
 	 });
 };
