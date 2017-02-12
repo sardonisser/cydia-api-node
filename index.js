@@ -35,7 +35,7 @@ self.getPrice = function(pkgname) {
 /**
  * @desc Retrieves info for package
  * @param {string} displayname - Package Display Name or Package Name
- * @return {object} - (display, name ,section, summary, version)
+ * @return {object/bool} - (display, name ,section, summary, version) / false for not found tweaks
  */
 self.getInfo = function(displayname) {
 	return new Promise(function(resolve, reject){
@@ -72,7 +72,7 @@ self.getInfo = function(displayname) {
 /**
  * @desc Get all info for Package
  * @param {string} displayname - Package Display Name or Package Name
- * @return {object} - (display, name ,section, summary, version, price)
+ * @return {object/bool} - (display, name ,section, summary, version, price) / false for not found tweaks
  */
  self.getAllInfo = function(displayname) {
 	return new Promise(function(resolve, reject){
